@@ -1,0 +1,9 @@
+[package]
+name = "signalstream"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bitvec = "1.0.1"
+libc = "0.2.178"
+signal-hook = "0.4.1"
