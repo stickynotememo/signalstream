@@ -43,6 +43,11 @@ impl Read for SignalStream {
 
         dbg!(bitlist.to_string());
 
+        for (i, bit) in bitlist.iter().enumerate() {
+            let byte = i / 8;
+            let shift = 7 - i % 8;
+            buf[byte] |= ((*bit) as u8) << shift
+        }
 
         // std::process::exit(1);
         // if bytelist.len() % buf.len() != 0 {
