@@ -1,12 +1,12 @@
 #![warn(missing_docs)]
-//! Send data over UNIX signals.
+//! Send data over Unix signals.
 //!
-//! UNIX provides signals, like SIGTERM and SIGSTOP which let two processes, or the kernel and the
-//! process commmunicate with each other. This form of IPC can be used to send arbitrary binary
+//! Unix provides signals, like `SIGTERM` and `SIGSTOP` which let two processes, or the kernel and the
+//! process commmunicate with each other. This form of IPC can be used to send any binary
 //! data, if both processes cooperate.
 //!
 //! **Please do not use this in production**. There are many better ways to send data between
-//! processes, like [pipes](https://man7.org/linux/man-pages/man2/pipe.2.html)
+//! processes, like [pipes](https://man7.org/linux/man-pages/man2/pipe.2.html).
 //!
 //! # Usage
 //! Use of this crate requires initialisation of the [`SignalStream`] object. This object can be used
