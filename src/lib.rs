@@ -159,7 +159,7 @@ mod tests {
             assert_eq!(buf, LIPSUM.as_bytes());
         } else { // Writing process, as it knows the pid of the original program
             let mut sigstream = SignalStream::new(new_pid);
-            sleep(Duration::from_millis(5));
+            sleep(Duration::from_millis(5)); // Ensures that the reader has started reading.
             sigstream.write(LIPSUM.as_bytes()).unwrap();
         };
         

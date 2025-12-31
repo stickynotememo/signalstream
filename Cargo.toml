@@ -1,6 +1,9 @@
 [package]
 name = "signalstream"
-version = "0.1.0"
+description = "Send data over Unix signals. (Don't use this)."
+license = "MIT"
+repository = "https://github.com/stickynotememo/signalstream"
+version = "1.0.0"
 edition = "2024"
 
 [dependencies]
