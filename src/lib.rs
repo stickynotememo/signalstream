@@ -22,6 +22,7 @@
 //! use signalstream::*;
 //! let mut sigstream = SignalStream::new(pid2);
 //! let mut buf = [0; 6];
+//! # std::process::exit(0);
 //! sigstream.read(&mut buf);
 //! println!("String: {}", from_utf8(&buf).unwrap());
 //!
@@ -123,7 +124,7 @@ impl std::io::Write for SignalStream {
                 };
                 unsafe {
                     libc::kill(self.pid as i32, signal);
-                    sleep(Duration::from_millis(10));
+                    sleep(Duration::from_millis(5));
                 };
             }
         };
@@ -158,9 +159,8 @@ mod tests {
             assert_eq!(buf, LIPSUM.as_bytes());
         } else { // Writing process, as it knows the pid of the original program
             let mut sigstream = SignalStream::new(new_pid);
-            sleep(Duration::from_millis(10));
+            sleep(Duration::from_millis(5));
             sigstream.write(LIPSUM.as_bytes()).unwrap();
-            dbg!("pong");
         };
         
     }
