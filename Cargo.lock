@@ -25,6 +25,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "fork"
+version = "0.6.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "29714eb48a54d35d6f107e38cc58003f2e26825f222119db8369d28b24b79f2a"
+dependencies = [
+ "libc",
+]
+
+[[package]]
 name = "funty"
 version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -67,6 +76,7 @@ name = "signalstream"
 version = "0.1.0"
 dependencies = [
  "bitvec",
+ "fork",
  "libc",
  "signal-hook",
 ]

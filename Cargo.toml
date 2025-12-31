@@ -7,3 +7,6 @@ edition = "2024"
 bitvec = "1.0.1"
 libc = "0.2.178"
 signal-hook = "0.4.1"
+
+[dev-dependencies]
+fork = "0.6.0"
