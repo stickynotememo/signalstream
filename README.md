@@ -1,5 +1,6 @@
 ![Static Badge](https://img.shields.io/badge/github-repo-blue?logo=github&link=https%3A%2F%2Fgithub.com%2Fstickynotememo%2Fsignalstream)
 ![docs.rs](https://img.shields.io/docsrs/signalstream) 
+
 Send data over Unix signals.
 
 Unix provides signals, like `SIGTERM` and `SIGSTOP` which let two processes, or the kernel and the
